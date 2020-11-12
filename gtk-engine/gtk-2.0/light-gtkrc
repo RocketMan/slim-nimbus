@@ -8,7 +8,7 @@ style "default"
   bg[INSENSITIVE]   = "#efebe5" 
   bg[ACTIVE]        = "#bec1c7" 
 
-  engine "nimbus" 
+  engine "slimnimbus"
     {
       light_theme
     }
@@ -21,7 +21,7 @@ style "entry"  = "default"
   bg[INSENSITIVE] = "#dee0e5"
   base[INSENSITIVE] = "#dee0e5"
   base[SELECTED] = "#0e5a8f"
-  engine "nimbus"
+  engine "slimnimbus"
   {
       light_theme
   }

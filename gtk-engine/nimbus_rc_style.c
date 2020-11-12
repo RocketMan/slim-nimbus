@@ -58,7 +58,7 @@ nimbus_rc_style_register_type (GTypeModule *module)
   
   nimbus_type_rc_style = g_type_module_register_type (module,
 						     GTK_TYPE_RC_STYLE,
-						     "NimbusRcStyle",
+						     "SlimNimbusRcStyle",
 						     &object_info, 0);
 }
 static GdkPixbuf *

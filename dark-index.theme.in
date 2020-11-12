@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-_Name=Dark Nimbus
+_Name=Slim Nimbus (dark)
 _Comment=Sun Microsystems, Inc. alternative theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=dark-nimbus
-IconTheme=nimbus
-MetacityTheme=dark-nimbus
+GtkTheme=slim-nimbus-dark
+IconTheme=slim-nimbus
+MetacityTheme=slim-nimbus-dark
 CursorTheme=DMZ-White

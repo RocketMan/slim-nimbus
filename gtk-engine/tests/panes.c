@@ -7,10 +7,10 @@ void clicked ()
 
   if (dark)
     gtk_settings_set_string_property (gtk_settings_get_default (),
-                                      "gtk-theme-name", "nimbus", "blah");
+                                      "gtk-theme-name", "slim-nimbus", "blah");
   else
     gtk_settings_set_string_property (gtk_settings_get_default (),
-                                      "gtk-theme-name", "dark-nimbus", "blah");
+                                      "gtk-theme-name", "slim-nimbus-dark", "blah");
 
     
   dark = !dark;
@@ -33,7 +33,7 @@ void main (int argc, char **argv)
   gtk_init (&argc, &argv);
 
   gtk_settings_set_string_property (gtk_settings_get_default (),
-				    "gtk-theme-name", "dark-nimbus", "gdm");
+				    "gtk-theme-name", "slim-nimbus-dark", "gdm");
 
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);

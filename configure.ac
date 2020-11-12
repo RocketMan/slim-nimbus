@@ -2,7 +2,7 @@
 ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
 
 AC_INIT(metacity)
-AM_INIT_AUTOMAKE(nimbus, 1.0)
+AM_INIT_AUTOMAKE(slim-nimbus, 1.0)
 DISTDIR=${PACKAGE}-${VERSION}
 AM_MAINTAINER_MODE
 
@@ -27,7 +27,7 @@ GTK2_LIBS=`echo $GTK2_LIBS | sed -e "s/-lpangocairo-1.0//g" | sed -e "s/-lcairo/
 AC_SUBST(GTK2_LIBS)
 
 # Define the toplevel icons path here
-AC_SUBST(themedir, "\${datadir}/icons/nimbus")
+AC_SUBST(themedir, "\${datadir}/icons/slim-nimbus")
 # Define  source toplevel icons path here
 AC_SUBST(iconsrcdir)
 iconsrcdir=`pwd`
@@ -48,14 +48,14 @@ if test "x$have_utils" = "xyes"; then
 else
    AC_MSG_RESULT([no])
    AC_MSG_ERROR([icon-naming-utils >= $UTILS_REQUIRED is required to build
-                 and install the nimbus icon theme])
+                 and install the slim-nimbus icon theme])
 fi
 
 
 GTK2_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
 AC_SUBST(GTK2_VERSION)
 
-GETTEXT_PACKAGE=nimbus
+GETTEXT_PACKAGE=slim-nimbus
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package.])
 AM_GLIB_GNU_GETTEXT
@@ -67,7 +67,6 @@ gtk-engine/Makefile
 gtk-engine/gtk-2.0/Makefile
 gtk-engine/gtk-2.0/iconrc
 gtk-engine/gtk-3.0/Makefile
-gtk-engine/gtk-3.0/apps/Makefile
 gtk-engine/gtk-3.0/assets/Makefile
 gtk-engine/images/Makefile
 metacity/Makefile

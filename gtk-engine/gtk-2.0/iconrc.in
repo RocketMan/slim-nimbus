@@ -1,4 +1,4 @@
-pixmap_path "@prefix@/share/themes/nimbus/gtk-2.0"
+pixmap_path "@prefix@/share/themes/slim-nimbus/gtk-2.0"
 style "icon-style"
 {
    stock["gtk-dialog-authentication"] =  {{ "dialog_authentication.png",*,*,*}}

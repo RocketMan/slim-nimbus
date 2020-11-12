@@ -2454,6 +2454,6 @@ nimbus_style_register_type (GTypeModule * module)
 
   nimbus_type_style = g_type_module_register_type (module,
 						  GTK_TYPE_STYLE,
-						  "NimbusStyle",
+						  "SlimNimbusStyle",
 						  &object_info, 0);
 }
