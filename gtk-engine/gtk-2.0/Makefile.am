@@ -1,6 +1,6 @@
 themedir = $(datadir)/themes/$(PACKAGE)/gtk-2.0
-darkthemedir = $(datadir)/themes/dark-$(PACKAGE)/gtk-2.0
-lightthemedir = $(datadir)/themes/light-$(PACKAGE)/gtk-2.0
+darkthemedir = $(datadir)/themes/$(PACKAGE)-dark/gtk-2.0
+lightthemedir = $(datadir)/themes/$(PACKAGE)-light/gtk-2.0
 theme_DATA =	gtkrc		\
 		iconrc		\
 		dialog_authentication.png  \

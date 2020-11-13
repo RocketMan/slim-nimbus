@@ -4,8 +4,8 @@ THEME_SUBDIR=metacity-1
 
 THEME_NAME=$(PACKAGE)
 
-DARK_THEME_NAME=dark-$(PACKAGE)
-LIGHT_THEME_NAME=light-$(PACKAGE)
+DARK_THEME_NAME=$(PACKAGE)-dark
+LIGHT_THEME_NAME=$(PACKAGE)-light
 
 THEME_IMAGES =  button-close-icon.png \
 		button-close-icon-prelight.png \

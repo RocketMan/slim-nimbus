@@ -5,8 +5,8 @@ AUTOMAKE_OPTIONS = dist-bzip2
 SUBDIRS=gtk-engine metacity icons po
 
 themedir = $(datadir)/themes/$(PACKAGE)/
-darkthemedir = $(datadir)/themes/dark-$(PACKAGE)/
-lightthemedir = $(datadir)/themes/light-$(PACKAGE)/
+darkthemedir = $(datadir)/themes/$(PACKAGE)-dark/
+lightthemedir = $(datadir)/themes/$(PACKAGE)-light/
 theme_in_files = index.theme.in \
 		 dark-index.theme.in \
 		 light-index.theme.in

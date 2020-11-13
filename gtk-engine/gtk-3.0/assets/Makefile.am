@@ -1,4 +1,6 @@
 assetsdir = $(datadir)/themes/$(PACKAGE)/gtk-3.0/assets
+darkassetsdir = $(datadir)/themes/$(PACKAGE)-dark/gtk-3.0/assets
+lightassetsdir = $(datadir)/themes/$(PACKAGE)-light/gtk-3.0/assets
 assets_DATA =	checkbox-checked-active.png \
 	checkbox-checked-active@2.png \
 	checkbox-checked-insensitive-unfocused.png \
@@ -98,3 +100,13 @@ assets_DATA =	checkbox-checked-active.png \
 	trough-v.png
 
 EXTRA_DIST = $(assets_DATA)
+
+install-data-local:
+	$(mkinstalldirs) $(DESTDIR)$(darkassetsdir);
+	for i in $(assets_DATA); do   \
+	  (cd $(DESTDIR)$(darkassetsdir) && ln -fs ../../../$(PACKAGE)/gtk-3.0/assets/$$i .)  \
+	done
+	$(mkinstalldirs) $(DESTDIR)$(lightassetsdir);
+	for i in $(assets_DATA); do   \
+	  (cd $(DESTDIR)$(lightassetsdir) && ln -fs ../../../$(PACKAGE)/gtk-3.0/assets/$$i .)  \
+	done
