@@ -1,6 +1,6 @@
 @INTLTOOL_THEME_RULE@
 
-AUTOMAKE_OPTIONS = dist-bzip2
+AUTOMAKE_OPTIONS = dist-bzip2 foreign
 
 SUBDIRS=gtk-engine metacity icons po
 
