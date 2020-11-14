@@ -1910,15 +1910,15 @@ combobox entry:not(:only-child) {
   border-right-width: 0; }
 
 tooltip {
-  border-radius: 4px;
+  border-radius: 1px;
   box-shadow: none; }
   tooltip.background {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(#E8E9ED, 0.9);
-    background-color: #E8E9ED; }
+    border-color: #000000;
+    background-color: #ffffe0; }
     tooltip.background label {
-      padding: 1px; }
+      padding: 0px; }
   tooltip * {
     background-color: transparent;
     color: #000000; }
