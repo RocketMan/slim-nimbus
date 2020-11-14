@@ -1285,8 +1285,6 @@ scrollbar {
       border-style: solid;
       border-left-width: 11px;
       border-right-width: 11px;
-      margin-left: -11px;
-      margin-right: -11px;
       border-image: url("assets/scrollbar-slider-h.png") 7 11 7 11 stretch; }
     scrollbar.horizontal button {
       border: none;
@@ -1299,8 +1297,10 @@ scrollbar {
       scrollbar.horizontal button:backdrop {
         color: transparent; }
       scrollbar.horizontal button.down {
+        margin-left: -12px;
         background-image: url("assets/stepper-right.png"); }
       scrollbar.horizontal button.up {
+        margin-right: -12px;
         background-image: url("assets/stepper-left.png"); }
   scrollbar.vertical {
     border-left: none;
@@ -1310,8 +1310,6 @@ scrollbar {
       min-width: 0px;
       padding: 0;
       margin: 1px;
-      margin-top: -11px;
-      margin-bottom: -11px;
       border-width: 7px;
       border-radius: 0px;
       border-style: solid;
@@ -1329,8 +1327,10 @@ scrollbar {
       scrollbar.vertical button:backdrop {
         color: transparent; }
       scrollbar.vertical button.down {
+        margin-top: -12px;
         background-image: url("assets/stepper-down.png"); }
       scrollbar.vertical button.up {
+        margin-bottom: -12px;
         background-image: url("assets/stepper-up.png"); }
   treeview ~ scrollbar.vertical {
     border-top: 1px solid shade(#B9D0E4, 0.9);
