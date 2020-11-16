@@ -2759,3 +2759,11 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_b shade(#E8E9ED, 0.89);
 @define-color wm_button_active_color_c shade(#E8E9ED, 0.9);
 @define-color content_view_bg #FFFFFF;
+
+/* epiphany */
+.incognito-mode.titlebar .titlebutton:not(separator) {
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 4px;
+}

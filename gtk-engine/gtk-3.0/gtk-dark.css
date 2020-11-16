@@ -2768,3 +2768,11 @@ headerbar .title.text-button {
     color: @theme_text_color;
     background-color: @theme_bg_color;
 }
+
+/* epiphany */
+.incognito-mode.titlebar .titlebutton:not(separator) {
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
