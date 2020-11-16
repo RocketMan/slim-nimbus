@@ -2760,6 +2760,15 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_c shade(#E8E9ED, 0.9);
 @define-color content_view_bg #FFFFFF;
 
+headerbar.titlebar .title:backdrop,
+headerbar.titlebar .subtitle:backdrop,
+headerbar.titlebar separator:backdrop,
+headerbar.titlebar button:backdrop:not(.close):not(.maximize):not(.minimize),
+headerbar.titlebar combobox:backdrop,
+headerbar.titlebar entry:backdrop {
+    opacity: 0.5;
+}
+
 /* epiphany */
 .incognito-mode.titlebar .titlebutton:not(separator) {
     padding: 0px;
