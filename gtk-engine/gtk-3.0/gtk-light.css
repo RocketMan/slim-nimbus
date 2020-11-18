@@ -1875,13 +1875,13 @@ toolbar {
     .inline-toolbar toolbutton > button:backdrop {
       color: #000000; }
 
-.linked button:last-child {
+.linked button:last-child:not(:only-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-left: 0;
 }
 
-.linked button:first-child {
+.linked button:first-child:not(:only-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 0;
