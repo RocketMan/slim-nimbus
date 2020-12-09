@@ -1288,7 +1288,7 @@ scrollbar {
       color: transparent;
       box-shadow: none;
       min-width: 29px;
-      min-height: 15px; }
+      /* min-height: 15px; */ }
       scrollbar.horizontal button:backdrop {
         color: transparent; }
       scrollbar.horizontal button.down {
