@@ -757,6 +757,7 @@ menu, .menu {
   background-color: #E8E9ED;
   box-shadow: inset 0 -5px 2px -2px alpha(white, 0.9), inset 0 5px 2px -2px alpha(white, 0.9); }
   .csd menu, .csd .menu {
+    box-shadow: 0 0 4px 1px alpha(#000000, 0.2);
     border-radius: 0px;
     border: none; }
   menu > arrow, .menu > arrow {
@@ -844,7 +845,7 @@ popover, popover.background {
   color: #000000;
   background-clip: border-box;
   background-color: #E8E9ED;
-  box-shadow: none; }
+  box-shadow: 0 0 4px 1px alpha(#000000, 0.2); }
   .csd popover, popover, .csd popover.background, popover.background {
     border: 1px solid shade(#E8E9ED, 0.9); }
   popover > list, popover > .view, popover > iconview, popover > toolbar, popover > .inline-toolbar, popover.background > list, popover.background > .view, popover.background > iconview, popover.background > toolbar, popover.background > .inline-toolbar {
