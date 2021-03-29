@@ -2766,10 +2766,21 @@ headerbar.titlebar entry:backdrop {
     opacity: 0.5;
 }
 
-/* epiphany */
-.incognito-mode.titlebar .titlebutton:not(separator) {
-    padding: 0px;
-    margin: 0px;
-    border: 1px solid black;
-    border-radius: 4px;
-}
+/* libhandy */
+viewswitcher, viewswitcher button {
+    margin: 0;
+    padding: 0; }
+viewswitcher button > stack > box.narrow {
+    font-size: 0.75rem;
+    padding-top: 7px;
+    padding-bottom: 5px; }
+viewswitcher button:last-child:not(:only-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+viewswitcher button:first-child:not(:only-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0; }
+viewswitcher button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-right: 0; }
