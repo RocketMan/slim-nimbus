@@ -2766,6 +2766,15 @@ headerbar.titlebar entry:backdrop {
     opacity: 0.5;
 }
 
+notebook tab button:not(:hover) {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+notebook tab:not(:checked):not(:hover) button {
+    color: transparent;
+}
+
 /* libhandy */
 viewswitcher, viewswitcher button {
     margin: 0;
