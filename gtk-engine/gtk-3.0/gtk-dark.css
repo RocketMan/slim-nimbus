@@ -1875,22 +1875,17 @@ toolbar {
 .linked button:last-child:not(:only-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    margin-left: 0;
-}
-
+    margin-left: 0; }
 .linked button:first-child:not(:only-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 0;
-    border-right: 0;
-}
-
+    border-right: 0; }
 .linked button:not(:first-child):not(:last-child) {
     border-radius: 0;
     margin-left: 0;
     margin-right: 0;
-    border-right: 0;
-}
+    border-right: 0; }
 
 combobox button:not(:only-child) {
   border-bottom-left-radius: 0;
@@ -2754,8 +2749,7 @@ read if you used those and something break with a version upgrade you're on your
 
 headerbar .title.text-button {
     color: @theme_text_color;
-    background-color: @theme_bg_color;
-}
+    background-color: @theme_bg_color; }
 
 headerbar.titlebar .title:backdrop,
 headerbar.titlebar .subtitle:backdrop,
@@ -2763,17 +2757,14 @@ headerbar.titlebar separator:backdrop,
 headerbar.titlebar button:backdrop:not(.close):not(.maximize):not(.minimize),
 headerbar.titlebar combobox:backdrop,
 headerbar.titlebar entry:backdrop {
-    opacity: 0.5;
-}
+    opacity: 0.5; }
 
 notebook tab button:not(:hover) {
     border-color: transparent;
     background: transparent;
-    box-shadow: none;
-}
+    box-shadow: none; }
 notebook tab:not(:checked):not(:hover) button {
-    color: transparent;
-}
+    color: transparent; }
 
 /* libhandy */
 tabbar tab,
@@ -2804,8 +2795,7 @@ tabbar tab > button:not(:hover) {
 tabbar tabbox {
     box-shadow: inset 0 -1px #888888; }
 tabbar tabbox:backdrop {
-    opacity: 0.5;
-}
+    opacity: 0.5; }
 viewswitcher, viewswitcher button {
     margin: 0;
     padding: 0; }

@@ -1614,8 +1614,7 @@ headerbar {
     padding-right: 12px;
     color: alpha(currentColor, 0.7); }
   headerbar entry {
-    min-height: 20px;
-  }
+    min-height: 20px; }
   headerbar button {
     min-height: 20px;
     padding: 4px 8px;
@@ -1871,22 +1870,17 @@ toolbar {
 .linked button:last-child:not(:only-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    margin-left: 0;
-}
-
+    margin-left: 0; }
 .linked button:first-child:not(:only-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 0;
-    border-right: 0;
-}
-
+    border-right: 0; }
 .linked button:not(:first-child):not(:last-child) {
     border-radius: 0;
     margin-left: 0;
     margin-right: 0;
-    border-right: 0;
-}
+    border-right: 0; }
 
 combobox button:not(:only-child) {
   border-bottom-left-radius: 0;
@@ -2754,17 +2748,14 @@ headerbar.titlebar separator:backdrop,
 headerbar.titlebar button:backdrop:not(.close):not(.maximize):not(.minimize),
 headerbar.titlebar combobox:backdrop,
 headerbar.titlebar entry:backdrop {
-    opacity: 0.5;
-}
+    opacity: 0.5; }
 
 notebook tab button:not(:hover) {
     border-color: transparent;
     background: transparent;
-    box-shadow: none;
-}
+    box-shadow: none; }
 notebook tab:not(:checked):not(:hover) button {
-    color: transparent;
-}
+    color: transparent; }
 
 /* libhandy */
 tabbar tab,
@@ -2795,8 +2786,7 @@ tabbar tab > button:not(:hover) {
 tabbar tabbox {
     box-shadow: inset 0 -1px #888888; }
 tabbar tabbox:backdrop {
-    opacity: 0.5;
-}
+    opacity: 0.5; }
 viewswitcher, viewswitcher button {
     margin: 0;
     padding: 0; }
