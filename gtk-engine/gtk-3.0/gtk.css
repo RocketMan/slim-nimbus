@@ -2767,7 +2767,8 @@ notebook tab:not(:checked):not(:hover) button {
 }
 
 /* libhandy */
-tabbar tab {
+tabbar tab,
+.tab-drag-icon tab {
     padding: 6px;
     border-radius: 5px;
     border-bottom-right-radius: 0;
@@ -2779,12 +2780,18 @@ tabbar tab:checked {
     border-bottom-color: #a3b8cb; }
 tabbar tab:not(:checked) {
     margin-top: 2px; }
-tabbar tab > button {
+tabbar tab > button,
+.tab-drag-icon tab > button {
     padding: 2px; }
 tabbar tab > button:not(:hover) {
     border-color: transparent;
     background: transparent;
     box-shadow: none; }
+.tab-drag-icon tab {
+    min-height: 26px;
+    background-color: @theme_bg_color;
+    box-shadow: 0 0 4px 1px alpha(#000000, 0.3);
+    margin: 25px; }
 tabbar tabbox {
     box-shadow: inset 0 -1px #888888; }
 tabbar tabbox:backdrop {
