@@ -68,6 +68,8 @@ gtk-engine/gtk-2.0/Makefile
 gtk-engine/gtk-2.0/iconrc
 gtk-engine/gtk-3.0/Makefile
 gtk-engine/gtk-3.0/assets/Makefile
+gtk-engine/gtk-4.0/Makefile
+gtk-engine/gtk-4.0/assets/Makefile
 gtk-engine/images/Makefile
 metacity/Makefile
 icons/192x192/devices/Makefile
