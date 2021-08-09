@@ -86,10 +86,10 @@ scrollbar {
   scrollbar slider {
     transition: 200ms ease-out; }
 
-assistant .sidebar label.highlight {
+.assistant .sidebar label.highlight {
   color: #FFFFFF;
   background-color: #4B6983; }
-assistant .sidebar {
+.assistant .sidebar {
   padding: 4px;
   border-width: 0 1px 0 0;
   border-style: solid;
@@ -260,35 +260,6 @@ check, radio {
     .check:indeterminate:disabled, check:indeterminate:disabled {
       -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive-@2.png")); }
 
-menu menuitem .check, menu menuitem check {
-  -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked-@2.png"));
-  animation: none;
-  transition: none; }
-  menu menuitem .check:backdrop, menu menuitem check:backdrop {
-    opacity: 0.8; }
-  menu menuitem .check:hover, menu menuitem check:hover {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked-@2.png")); }
-  menu menuitem .check:disabled, menu menuitem check:disabled {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive-@2.png")); }
-    menu menuitem .check:disabled:hover, menu menuitem check:disabled:hover {
-      -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"), url("assets/checkbox-unchecked-insensitive-@2.png")); }
-  menu menuitem .check:checked, menu menuitem check:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked-@2.png")); }
-    menu menuitem .check:checked:hover, menu menuitem check:checked:hover {
-      -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked-@2.png")); }
-    menu menuitem .check:checked:disabled, menu menuitem check:checked:disabled {
-      -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive-@2.png")); }
-      menu menuitem .check:checked:disabled:hover, menu menuitem check:checked:disabled:hover {
-        -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"), url("assets/checkbox-checked-insensitive-@2.png")); }
-  menu menuitem .check:indeterminate, menu menuitem check:indeterminate {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"), url("assets/checkbox-mixed-@2.png")); }
-    menu menuitem .check:indeterminate:hover, menu menuitem check:indeterminate:hover {
-      -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"), url("assets/checkbox-mixed-@2.png")); }
-    menu menuitem .check:indeterminate:disabled, menu menuitem check:indeterminate:disabled {
-      -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive-@2.png")); }
-      menu menuitem .check:indeterminate:disabled:hover, menu menuitem check:indeterminate:disabled:hover {
-        -gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"), url("assets/checkbox-mixed-insensitive-@2.png")); }
-
 .radio, radio {
   -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked-@2.png"));
   transition: 0.2s; }
@@ -316,35 +287,6 @@ menu menuitem .check, menu menuitem check {
       -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-active.png"), url("assets/radio-mixed-active-@2.png")); }
     .radio:indeterminate:disabled, radio:indeterminate:disabled {
       -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive-@2.png")); }
-
-menu menuitem .radio, menu menuitem radio {
-  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked-@2.png"));
-  animation: none;
-  transition: none; }
-  menu menuitem .radio:backdrop, menu menuitem radio:backdrop {
-    opacity: 0.8; }
-  menu menuitem .radio:hover, menu menuitem radio:hover {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked-@2.png")); }
-  menu menuitem .radio:disabled, menu menuitem radio:disabled {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive-@2.png")); }
-    menu menuitem .radio:disabled:hover, menu menuitem radio:disabled:hover {
-      -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-insensitive.png"), url("assets/radio-unchecked-insensitive-@2.png")); }
-  menu menuitem .radio:checked, menu menuitem radio:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"), url("assets/radio-checked-@2.png")); }
-    menu menuitem .radio:checked:hover, menu menuitem radio:checked:hover {
-      -gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"), url("assets/radio-checked-@2.png")); }
-    menu menuitem .radio:checked:disabled, menu menuitem radio:checked:disabled {
-      -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png"), url("assets/radio-checked-insensitive-@2.png")); }
-      menu menuitem .radio:checked:disabled:hover, menu menuitem radio:checked:disabled:hover {
-        -gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.png"), url("assets/radio-checked-insensitive-@2.png")); }
-  menu menuitem .radio:indeterminate, menu menuitem radio:indeterminate {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"), url("assets/radio-mixed-@2.png")); }
-    menu menuitem .radio:indeterminate:hover, menu menuitem radio:indeterminate:hover {
-      -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"), url("assets/radio-mixed-@2.png")); }
-    menu menuitem .radio:indeterminate:disabled, menu menuitem radio:indeterminate:disabled {
-      -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive-@2.png")); }
-      menu menuitem .radio:indeterminate:disabled:hover, menu menuitem radio:indeterminate:disabled:hover {
-        -gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.png"), url("assets/radio-mixed-insensitive-@2.png")); }
 
 treeview.view check:selected, treeview.view radio:selected {
   color: #000000;
@@ -784,53 +726,26 @@ menubar, .menubar {
     color: #000000;
     background-color: #E8E9ED; }
 
-menubar > menuitem, .menubar > menuitem {
+menubar > item, .menubar > item {
   padding: 3px 5px;
   border: none;
   color: #000000;
   background-color: transparent; }
-  menubar > menuitem:hover, .menubar > menuitem:hover {
+  menubar > item:hover, .menubar > item:hover {
     color: #FFFFFF;
     background-color: #4B6983; }
-  menubar > menuitem:disabled, .menubar > menuitem:disabled {
+  menubar > item:disabled, .menubar > item:disabled {
     color: mix(#000000, #E8E9ED, 0.5);
     background-color: transparent; }
-  menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
+  menubar > item:backdrop, .menubar > item:backdrop {
     color: #000000;
     background-color: transparent; }
 
-menu menuitem, .menu menuitem {
-  min-height: 16px;
-  min-width: 40px;
-  padding: 4px;
-  border: none;
-  border-radius: 0;
-  color: #000000;
-  background-color: #E8E9ED; }
-  menu menuitem:hover, .menu menuitem:hover {
-    color: #FFFFFF;
-    background-color: #4B6983; }
-    menu menuitem:hover switch slider, menu menuitem:hover scale highlight, menu menuitem:hover scale slider, .menu menuitem:hover switch slider, .menu menuitem:hover scale highlight, .menu menuitem:hover scale slider {
-      background-color: #FFFFFF; }
-    menu menuitem:hover scale trough, menu menuitem:hover switch, .menu menuitem:hover scale trough, .menu menuitem:hover switch {
-      background-color: alpha(#FFFFFF, 0.75); }
-  menu menuitem:disabled, .menu menuitem:disabled {
-    color: mix(#000000, #E8E9ED, 0.5); }
-  menu menuitem arrow, .menu menuitem arrow {
-    min-width: 16px;
-    min-height: 16px; }
-    menu menuitem arrow:dir(ltr), .menu menuitem arrow:dir(ltr) {
-      margin-left: 10px;
-      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-    menu menuitem arrow:dir(rtl), .menu menuitem arrow:dir(rtl) {
-      margin-right: 10px;
-      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
-
-menuitem accelerator {
+item accelerator {
   color: alpha(currentColor, 0.55); }
-  menuitem accelerator:hover {
+  item accelerator:hover {
     color: alpha(#FFFFFF, 0.8); }
-  menuitem accelerator:disabled {
+  item accelerator:disabled {
     color: mix(#000000, #E8E9ED, 0.5); }
 
 popover.background { background-color: transparent; font: initial; }
@@ -863,19 +778,19 @@ popover:backdrop {
   background-color: #E8E9ED;
   box-shadow: none; }
 
-modelbutton.flat, menuitem.button.flat, .menuitem.button.flat {
+modelbutton.flat, item.button.flat, .item.button.flat {
   padding: 2px 8px;
   border: none;
   color: #000000;
   background-color: transparent; }
-  modelbutton.flat:hover, modelbutton.flat:selected, modelbutton.flat:active:hover, menuitem.button.flat:hover, menuitem.button.flat:selected, menuitem.button.flat:active:hover, .menuitem.button.flat:hover, .menuitem.button.flat:selected, .menuitem.button.flat:active:hover {
+  modelbutton.flat:hover, modelbutton.flat:selected, modelbutton.flat:active:hover, item.button.flat:hover, item.button.flat:selected, item.button.flat:active:hover, .item.button.flat:hover, .item.button.flat:selected, .item.button.flat:active:hover {
     color: #FFFFFF;
     background-color: #4B6983; }
-  modelbutton.flat > image, menuitem.button.flat > image, .menuitem.button.flat > image {
+  modelbutton.flat > image, item.button.flat > image, .item.button.flat > image {
     padding-right: 4px; }
-  modelbutton.flat arrow.left, menuitem.button.flat arrow.left, .menuitem.button.flat arrow.left {
+  modelbutton.flat arrow.left, item.button.flat arrow.left, .item.button.flat arrow.left {
     -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-  modelbutton.flat arrow.right, menuitem.button.flat arrow.right, .menuitem.button.flat arrow.right {
+  modelbutton.flat arrow.right, item.button.flat arrow.right, .item.button.flat arrow.right {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 notebook {
@@ -1368,7 +1283,7 @@ separator {
       border-color: shade(#E8E9ED, 0.9); }
   menu separator {
     background-color: shade(#E8E9ED, 0.9); }
-  menuitem separator {
+  item separator {
     border-width: 1px;
     border-style: none;
     color: mix(shade(#E8E9ED, 0.9), #E8E9ED, 0.5); }
@@ -2399,7 +2314,8 @@ window.csd:not(.maximized) {
 window.background.csd.popup {
   border-radius: 0; }
 
-window.dialog.print .dialog-action-box { margin: 12px; }
+.dialog-action-box { margin: 12px; }
+.dialog-action-box button { min-width: 70px; }
 
 window.dialog.print drawing { color: #2e3436; background: none; border: none; padding: 0; }
 
@@ -2447,9 +2363,9 @@ panel-toplevel.background, panel-toplevel.background menubar {
   color: #000000; }
 panel-toplevel.background menubar, panel-toplevel.background #PanelApplet label, panel-toplevel.background #PanelApplet image {
   color: #000000; }
-panel-toplevel.background menubar > menuitem, panel-toplevel.background menubar > menuitem label:backdrop {
+panel-toplevel.background menubar > item, panel-toplevel.background menubar > item label:backdrop {
   color: #000000; }
-panel-toplevel.background menubar > menuitem:hover, panel-toplevel.background menubar > menuitem:hover label:backdrop {
+panel-toplevel.background menubar > item:hover, panel-toplevel.background menubar > item:hover label:backdrop {
   color: #FFFFFF; }
 panel-toplevel.background button {
   color: #000000;
@@ -2493,7 +2409,7 @@ panel-toplevel.background na-tray-applet {
   -NaTrayApplet-icon-padding: 0;
   -NaTrayApplet-icon-size: 16px; }
 
-.mate-panel-menu-bar menubar > menuitem {
+.mate-panel-menu-bar menubar > item {
   color: #000000;
   background-color: #E8E9ED; }
 
@@ -2502,13 +2418,13 @@ panel-toplevel.background na-tray-applet {
   background-color: #E8E9ED; }
   .mate-panel-menu-bar, .mate-panel-menu-bar .menubar {
     background-color: #E8E9ED; }
-  .mate-panel-menu-bar menubar, .mate-panel-menu-bar menubar menuitem, .mate-panel-menu-bar togglebutton {
+  .mate-panel-menu-bar menubar, .mate-panel-menu-bar menubar item, .mate-panel-menu-bar togglebutton {
     border-color: transparent;
     background-color: transparent; }
-  .mate-panel-menu-bar menubar menuitem:hover, .mate-panel-menu-bar menubar menuitem:active {
+  .mate-panel-menu-bar menubar item:hover, .mate-panel-menu-bar menubar item:active {
     color: #FFFFFF;
     background-color: #4B6983; }
-  .mate-panel-menu-bar .menubar > .menuitem {
+  .mate-panel-menu-bar .menubar > .item {
     padding-top: 0;
     padding-bottom: 0; }
   .mate-panel-menu-bar GtkMenu .label {
@@ -2697,9 +2613,9 @@ UnityDecoration {
     background-color: #FFFFFF; }
     UnityDecoration .left:backdrop, UnityDecoration .right:backdrop, UnityDecoration.bottom:backdrop {
       background-color: #E8E9ED; }
-  UnityDecoration.menuitem, UnityDecoration .menuitem {
+  UnityDecoration.item, UnityDecoration .item {
     border-radius: 0; }
-    UnityDecoration.menuitem:hover, UnityDecoration.menuitem *:hover, UnityDecoration .menuitem:hover, UnityDecoration .menuitem *:hover {
+    UnityDecoration.item:hover, UnityDecoration.item *:hover, UnityDecoration .item:hover, UnityDecoration .item *:hover {
       background-color: #4B6983;
       color: #FFFFFF; }
 
@@ -2709,14 +2625,14 @@ UnityPanelWidget, .unity-panel {
   border-color: #E8E9ED;
   background-color: #E8E9ED;
   color: #000000; }
-  UnityPanelWidget.menuitem, UnityPanelWidget .menuitem, .unity-panel.menuitem, .unity-panel .menuitem {
+  UnityPanelWidget.item, UnityPanelWidget .item, .unity-panel.item, .unity-panel .item {
     border-width: 0 1px;
     color: #000000; }
 
 @keyframes playbackmenuitem_spinner {
   to {
     -gtk-icon-transform: rotate(1turn); } }
-.menu IdoPlaybackMenuItem.menuitem:active {
+.menu IdoPlaybackMenuItem.item:active {
   -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
   animation: playbackmenuitem_spinner 1s infinite linear;
   color: #4B6983; }
