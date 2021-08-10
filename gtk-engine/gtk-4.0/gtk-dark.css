@@ -749,9 +749,12 @@ item accelerator {
     color: mix(#000000, #B9D0E4, 0.5); }
 
 popover.background { background-color: transparent; font: initial; }
-popover.background > arrow, popover.background > contents { background-color: #ffffff; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.23); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-popover.background > contents { padding: 8px; }
-popover.background > contents separator { background-color: #d9d5d1; margin: 3px; }
+popover.background > contents { background-color: #ffffff; background-clip: padding-box; border-style: none; box-shadow: 0 0 6px 1px alpha(#000000, 0.4); }
+popover.background > arrow { border: 1px solid rgba(0, 0, 0, 0.23); }
+popover.background > contents separator { background-color: @borders; margin: 3px; }
+
+.solid-csd popover.background { background-color: @theme_bg_color; border: 1px solid @borders; }
+.solid-csd popover.background > arrow, .solid-csd popover.background > contents { border: none; box-shadow: none; }
 
 popover.menu { padding: 0; }
 popover.menu > arrow, popover.menu.background > contents { background-color: #B9D0E4; padding: 8px; }
@@ -2292,12 +2295,11 @@ headerbar.selection-mode, toolbar.selection-mode {
     headerbar.selection-mode .selection-menu button .dim-label, toolbar.selection-mode .selection-menu button .dim-label {
       color: shade(#607B8B, 0.7); }
 
-window.csd:not(.maximized) {
+window.csd:not(.maximized), .solid-csd:not(.maximized) {
   border-radius: 4px 4px 0 0;
   border-width: 0px;
-  box-shadow: 0 3px 9px 1px alpha(#000000, 0.3), 0 0 0 1px #ffffff;
-  margin: 10px; }
-  window.csd:backdrop {
+  box-shadow: 0 3px 9px 1px alpha(#000000, 0.3), 0 0 0 1px #ffffff; }
+  window.csd:backdrop, .solid-csd:backdrop {
     box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#ffffff, 0.65); }
   .maximized, .fullscreen, .tiled, .tiled-top, .tiled-right, .tiled-bottom, .tiled-left {
     border-radius: 0; }
