@@ -13,7 +13,9 @@
   outline-width: 1px;
   outline-offset: -3px;
   outline-color: shade(#E8E9ED, 0.75);
-  -gtk-outline-radius: 0; }
+  -gtk-outline-radius: 0;
+  --dim-opacity: 55%;
+  --disabled-opacity: 50%; }
 
 .background {
   color: #000000;
@@ -772,6 +774,7 @@ popover.background > contents separator { background-color: @borders; margin: 3p
 .solid-csd popover.background > arrow, .solid-csd popover.background > contents { border: none; box-shadow: none; }
 
 popover.menu > arrow, popover.menu.background > contents { background-color: #e8e9ed; }
+menubutton > popover.menu.background > contents { padding: 8px; }
 popover.menu.background separator { margin: 6px 0; }
 popover.menu accelerator { color: alpha(currentColor,0.55); }
 popover.menu accelerator:dir(ltr) { margin-left: 12px; }
@@ -796,7 +799,7 @@ popover:backdrop {
   box-shadow: none; }
 
 modelbutton.flat, item.button.flat, .item.button.flat {
-  padding: 2px 8px;
+  padding: 4px 10px;
   border: none;
   color: #000000;
   background-color: transparent; }
@@ -1321,9 +1324,6 @@ spinbutton.horizontal {
       border-color: shade(#E8E9ED, 0.9);
       color: mix(#000000, #E8E9ED, 0.5);
       background-color: mix(#000000, #E8E9ED, 0.95); }
-  spinbutton.horizontal:backdrop {
-    background-color: #FFFFFF;
-    border-color: shade(#E8E9ED, 0.9); }
   spinbutton.horizontal entry {
     padding: 7px 15px;
     border: none;
@@ -1356,6 +1356,8 @@ spinbutton.vertical button.down {
   border-top-width: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
+
+spinbutton.vertical > text, spinbutton:not(.vertical) { min-height: 32px; padding-left: 8px; padding-right: 8px; border: 1px solid; border-spacing: 6px; transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); color: black; border-color: #cdc7c2; background-color: #ffffff; transition-property: outline, outline-width, outline-offset, outline-color; transition-duration: 300ms; animation-timing-function: ease-in-out; }
 
 @keyframes spin {
   to {
@@ -1938,9 +1940,6 @@ columnview {
 .view {
   color: #000000;
   background-color: transparent; }
-  .view:backdrop {
-    color: #000000;
-    background-color: #FFFFFF; }
   .view:disabled {
     color: mix(#000000, #E8E9ED, 0.5);
     background-color: mix(#000000, #E8E9ED, 0.95); }
@@ -2208,6 +2207,7 @@ searchbar {
     border-color: #000000;
     outline-color: transparent; }
 
+row.button.destructive-action,
 button.destructive-action {
   border-width: 1px;
   border-style: solid;
@@ -2216,17 +2216,21 @@ button.destructive-action {
   color: mix(#FFFFFF, #CC0000, 0.1);
   background-color: #CC0000;
   background-image: linear-gradient(to bottom, shade(#CC0000, 1.15), #CC0000, shade(#CC0000, 1.05)); }
+  row.button.destructive-action:hover,
   button.destructive-action:hover {
     border-color: mix(#CC0000, #000000, 0.3);
     background-color: mix(#CC0000, #FFFFFF, 0.2); }
+  row.button.destructive-action:active,
   button.destructive-action:active {
     border-color: mix(#CC0000, #000000, 0.3);
     background-color: mix(#CC0000, #000000, 0.1); }
+  row.button.destructive-action:backdrop,
   button.destructive-action:backdrop {
     border-color: mix(#CC0000, #000000, 0.2);
     color: mix(#FFFFFF, #CC0000, 0.1);
     background-color: mix(#CC0000, #E8E9ED, 0.3); }
 
+row.button.suggested-action,
 button.suggested-action {
   border-width: 1px;
   border-style: solid;
@@ -2238,11 +2242,13 @@ button.suggested-action {
   background-color: shade(#E8E9ED, 0.5);
   background-image: linear-gradient(to bottom, shade(mix(#E8E9ED, #4B6983, 0.3), 0.9), shade(mix(#E8E9ED, #4B6983, 0.3), 0.85), mix(#E8E9ED, #4B6983, 0.3));
   box-shadow: inset 0 1px 0 0 alpha(white, 0.3); }
+  row.button.suggested-action:hover,
   button.suggested-action:hover {
     border-color: shade(mix(#E8E9ED, #4B6983, 0.3), 0.5);
     border-top-color: shade(mix(#E8E9ED, #4B6983, 0.3), 0.15);
     border-left-color: shade(mix(#E8E9ED, #4B6983, 0.3), 0.35);
     border-right-color: shade(mix(#E8E9ED, #4B6983, 0.3), 0.35); }
+  row.button.suggested-action:disabled,
   button.suggested-action:disabled {
     color: mix(#FFFFFF, mix(#000000, #E8E9ED, 0.5), 0.2); }
 
@@ -2866,21 +2872,41 @@ tabbox separator {
 tabboxchild {
     margin-left: -6px; }
 
+sheet {
+    box-shadow: 0 3px 9px 1px alpha(#000000, 0.3), 0 0 0 1px #ffffff;
+    border-radius: 4px 4px 0 0;
+    margin: 10px; }
+
+sheet viewport,
+sheet widget.response-area {
+    padding: 10px; }
+
+bottom-sheet > sheet > stack > widget > drag-handle { background-color: color-mix(in srgb, currentColor 25%, transparent); min-width: 54px; min-height: 6px; margin: 15px; border-radius: 99px; }
+
 @define-color accent_bg_color #4B6983;
 @define-color accent_fg_color #fff;
 @define-color accent_color @accent_bg_color;
 @define-color card_bg_color #ffffff;
 @define-color card_fg_color rgba(0, 0, 0, 0.8);
 @define-color shade_color rgba(0, 0, 0, 0.7);
+@define-color sidebar_bg_color shade(@theme_bg_color, 1.05);
+@define-color sidebar_fg_color @card_fg_color;
+@define-color sidebar_shade_color @shade_color;
+@define-color sidebar_backdrop_color @sidebar_bg_color;
+@define-color sidebar_border_color #cdc7c2;
 @define-color window_bg_color #fafafa;
 @define-color window_fg_color rgba(0, 0, 0, 0.8);
 
 /* lightly customized from libadwaita */
-
 preferencespage > scrolledwindow > viewport > clamp > box { margin: 24px 12px; border-spacing: 24px; }
 
 /************* AdwBanner * */
 banner > revealer > widget { background-color: mix(@accent_bg_color,@window_bg_color,0.7); color: @window_fg_color; padding: 6px; }
+
+/*************** AdwButtonRow * */
+row.button > box { margin-left: 12px; margin-right: 12px; border-spacing: 6px; min-height: 40px; }
+
+row.button > box > .icon:disabled { filter: Opacity(var(--disabled-opacity)); }
 
 /***************** Boxed Lists * */
 list.boxed-list > row.expander, list.content > row.expander { border: none; }
@@ -2889,36 +2915,57 @@ list.boxed-list > row:first-child, list.content > row:first-child, list.boxed-li
 
 list.boxed-list > row:last-child, list.content > row:last-child, list.boxed-list > row:last-child.expander:not(:checked), list.boxed-list > row:last-child.expander:not(:checked) row.header, list.content > row:last-child.expander:not(:checked) row.header, list.boxed-list > row:last-child.expander:checked list.nested, list.content > row:last-child.expander:checked list.nested, list.boxed-list >row:last-child.expander:checked list.nested > row:last-child, list.content > row:last-child.expander:checked list.nested > row:last-child { border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-bottom-width: 0; }
 
+/* Icons */
+statuspage > scrolledwindow > viewport > box > clamp > box > .icon { color: color-mix(in srgb, currentColor var(--dim-opacity), transparent); -gtk-icon-size: 128px; }
+
+/* Pill Buttons */
+menubutton.pill > button, button.pill { padding: 5px 32px; border-radius: 9999px; }
+
+menubutton.suggested-action, menubutton.opaque { border-radius: 6px; }
+
+menubutton.suggested-action.circular, menubutton.suggested-action.pill, menubutton.opaque.circular, menubutton.opaque.pill { border-radius: 9999px; }
+
+window.about .main-page .app-version, dialog.about .main-page .app-version { padding: 3px 18px; color: @accent_color; border-radius: 999px; margin-top: 3px; }
+
+/* Sidebar */
+.sidebar-pane { background-color: @sidebar_bg_color; color: @sidebar_fg_color; --shade-color: @sidebar_shade_color; }
+
+.sidebar-pane:backdrop { background-color: @sidebar_backdrop_color; transition: background-color 200ms ease-out; }
+
+.sidebar-pane banner > revealer > widget { background-color: color-mix(in srgb, @accent_bg_color 30%, @sidebar_bg_color); color: @sidebar_fg_color; }
+
+.sidebar-pane banner > revealer > widget:backdrop { background-color: color-mix(in srgb, @accent_bg_color 15%, @sidebar_bg_color); }
+
+.sidebar-pane:dir(ltr), .sidebar-pane:dir(ltr) banner > revealer > widget, .sidebar-pane.end:dir(rtl), .sidebar-pane.end:dir(rtl) banner > revealer > widget { box-shadow: inset -1px 0 @sidebar_border_color; }
+
+.sidebar-pane:dir(rtl), .sidebar-pane:dir(rtl) banner > revealer > widget, .sidebar-pane.end:dir(ltr), .sidebar-pane.end:dir(ltr) banner > revealer > widget { box-shadow: inset 1px 0 @sidebar_border_color; }
+
 /* Cards */
-shortcut > .keycap, list.boxed-list, list.content, .card { background-color: @card_bg_color; color: @card_fg_color; border-radius: 8px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03); }
+shortcut > .keycap, list.boxed-list, list.content, list.boxed-list-separate > row, .card { background-color: @card_bg_color; color: @card_fg_color; border-radius: 12px; box-shadow: 0 0 0 1px RGB(0 0 0/3%), 0 1px 3px 1px RGB(0 0 0/7%), 0 2px 6px 2px RGB(0 0 0/3%); }
 
-.osd shortcut > .keycap, .osd list.boxed-list, .osd list.content, shortcut > .osd.keycap, list.osd.boxed-list, list.osd.content, .osd .card, .card.osd { background-color: alpha(currentColor,0.1); color: inherit; box-shadow: none; }
+.osd shortcut > .keycap, .osd list.boxed-list, .osd list.content, .osd list.boxed-list-separate > row, shortcut > .osd.keycap, list.osd.boxed-list, list.osd.content, list.boxed-list-separate > row.osd, .osd .card, .card.osd { background-color: color-mix(in srgb, currentColor 10%, transparent); color: RGB(255 255 255/90%); box-shadow: none; }
 
-.card { outline: 0 solid transparent; outline-offset: 5px; }
+.card { outline: 0 solid transparent; outline-offset: 5px; transition: outline-color 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
-.card:focus:focus-visible { outline-color: alpha(@accent_color,0.5); outline-width: 2px; outline-offset: -1px; }
+.card:focus:focus-visible { outline-color: color-mix(in srgb, @accent_color 50%, transparent); outline-width: 2px; outline-offset: -1px; }
 
-.osd .card:focus:focus-visible, .card.osd:focus:focus-visible { outline-color: rgba(255, 255, 255, 0.5); }
+.card.activatable { transition: outline-color 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), background 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
-.card.activatable { transition: outline-color 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), background 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.card.activatable:hover { background-image: image(color-mix(in srgb, currentColor 3%, transparent)); }
 
-.card:hover { outline-color: @shade_color; outline-width: 1px; outline-offset: -1px; }
+.card.activatable:active { background-image: image(color-mix(in srgb, currentColor 8%, transparent)); }
 
-.card.activatable:hover { background-image: image(alpha(currentColor,0.03)); }
+flap > dimming, leaflet > dimming, navigation-view > dimming, overlay-split-view > dimming { background: @shade_color; }
 
-.card.activatable:active { background-image: image(alpha(currentColor,0.08)); }
+flap > shadow, leaflet > shadow, navigation-view > shadow, overlay-split-view > shadow { min-width: 56px; min-height: 56px; }
 
-flap > dimming, leaflet > dimming { background: @shade_color; }
+flap > shadow.left, leaflet > shadow.left, navigation-view > shadow.left, overlay-split-view > shadow.left { background-image: linear-gradient(to right, color-mix(in srgb, @shade_color 70%, transparent), color-mix(in srgb, @shade_color 14%, transparent) 40px, RGB(from @shade_color r g b/0) 56px), linear-gradient(to right, color-mix(in srgb, @shade_color 40%, transparent), color-mix(in srgb, @shade_color 14%, transparent) 7px, RGB(from @shade_color r g b/0) 24px); }
 
-flap > shadow, leaflet > shadow { min-width: 56px; min-height: 56px; }
+flap > shadow.right, leaflet > shadow.right, navigation-view > shadow.right, overlay-split-view > shadow.right { background-image: linear-gradient(to left, color-mix(in srgb, @shade_color 70%, transparent), color-mix(in srgb, @shade_color 14%, transparent) 40px, RGB(from @shade_color r g b/0) 56px), linear-gradient(to left, color-mix(in srgb, @shade_color 40%, transparent), color-mix(in srgb, @shade_color 14%, transparent) 7px, RGB(from @shade_color r g b/0) 24px); }
 
-flap > shadow.left, leaflet > shadow.left { background-image: linear-gradient(to right, alpha(@shade_color,0.7), alpha(@shade_color,0.14) 40px, alpha(@shade_color,0) 56px), linear-gradient(to right, alpha(@shade_color,0.4), alpha(@shade_color,0.14) 7px, alpha(@shade_color,0) 24px); }
+flap > shadow.up, leaflet > shadow.up, navigation-view > shadow.up, overlay-split-view > shadow.up { background-image: linear-gradient(to bottom, color-mix(in srgb, @shade_color 70%, transparent), color-mix(in srgb, @shade_color 14%, transparent) 40px, RGB(from @shade_color r g b/0) 56px), linear-gradient(to bottom, color-mix(in srgb, @shade_color 40%, transparent), color-mix(in srgb, @shade_color 14%, transparent) 7px, RGB(from @shade_color r g b/0) 24px); }
 
-flap > shadow.right, leaflet > shadow.right { background-image: linear-gradient(to left, alpha(@shade_color,0.7), alpha(@shade_color,0.14) 40px, alpha(@shade_color,0) 56px), linear-gradient(to left, alpha(@shade_color,0.4), alpha(@shade_color,0.14) 7px, alpha(@shade_color,0) 24px); }
-
-flap > shadow.up, leaflet > shadow.up { background-image: linear-gradient(to bottom, alpha(@shade_color,0.7), alpha(@shade_color,0.14) 40px, alpha(@shade_color,0) 56px), linear-gradient(to bottom, alpha(@shade_color,0.4), alpha(@shade_color,0.14) 7px, alpha(@shade_color,0) 24px); }
-
-flap > shadow.down, leaflet > shadow.down { background-image: linear-gradient(to top, alpha(@shade_color,0.7), alpha(@shade_color,0.14) 40px, alpha(@shade_color,0) 56px), linear-gradient(to top, alpha(@shade_color,0.4), alpha(@shade_color,0.14) 7px, alpha(@shade_color,0) 24px); }
+flap > shadow.down, leaflet > shadow.down, navigation-view > shadow.down, overlay-split-view > shadow.down { background-image: linear-gradient(to top, color-mix(in srgb, @shade_color 70%, transparent), color-mix(in srgb, @shade_color 14%, transparent) 40px, RGB(from @shade_color r g b/0) 56px), linear-gradient(to top, color-mix(in srgb, @shade_color 40%, transparent), color-mix(in srgb, @shade_color 14%, transparent) 7px, RGB(from @shade_color r g b/0) 24px); }
 
 /**************** AdwActionRow * */
 row label.subtitle { font-size: smaller; }
